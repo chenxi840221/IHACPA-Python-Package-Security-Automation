@@ -127,6 +127,12 @@ dmypy.json
 test-results/
 .tox/
 
+# Debug and development test files
+debug_*.py
+test_*_issues*.py
+test_method_calls.py
+test_exact_method.py
+
 # Documentation builds
 docs/_build/
 docs/site/

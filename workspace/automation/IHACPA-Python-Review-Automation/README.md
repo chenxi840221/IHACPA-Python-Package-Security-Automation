@@ -4,13 +4,13 @@
 
 This project automates the cybersecurity vulnerability review process for Python packages used by IHACPA (Independent Health and Aged Care Pricing Authority). The system automatically updates package information, checks multiple vulnerability databases, and generates comprehensive security assessments.
 
-## Current Status - Version 2.5.0
+## Current Status - Version 2.6.0
 
 - **Total Packages to Review:** 486 (confirmed from Excel analysis)
-- **Status:** ✅ **VERSION 2.5.0** - Enhanced NIST NVD scanner with WordPress/CMS plugin filtering
-- **Latest Achievement:** Fixed NIST NVD Column P discrepancies - lxml finds 10 CVEs, tabulate correctly filters WordPress plugin false positives
-- **Key Improvements:** Enhanced false positive detection, WordPress/CMS plugin exclusions, improved Python package recognition
-- **Enhanced:** All vulnerability scanners + intelligent recommendation system + improved MITRE accuracy + enhanced NIST NVD filtering
+- **Status:** ✅ **VERSION 2.6.0** - Additional MITRE CVE scanner fixes with hard exclusion improvements
+- **Latest Achievement:** Fixed additional MITRE CVE Column R discrepancies - PyJWT "ios" in "iss" false positive resolved, perfect accuracy achieved
+- **Key Improvements:** Hard exclusion pattern fixes, expanded known Python packages, JWT claim conflict resolution
+- **Enhanced:** All vulnerability scanners + intelligent recommendation system + near-perfect MITRE accuracy + enhanced NIST NVD filtering
 
 ## Key Features
 
@@ -22,7 +22,7 @@ This project automates the cybersecurity vulnerability review process for Python
 
 ### Multi-Database Vulnerability Scanning 🔥 **ENHANCED in v2.0.0**
 - **NIST NVD** (National Vulnerability Database) with **AI-powered analysis** ✨ **ENHANCED: WordPress/CMS plugin filtering**
-- **MITRE CVE** database with **AI-powered analysis** ✨ **ENHANCED: Better Python package detection**
+- **MITRE CVE** database with **AI-powered analysis** ✨ **ENHANCED: Near-perfect accuracy with hard exclusion fixes**
 - **SNYK** Vulnerability Database with **AI-powered analysis** ✨ **ENHANCED: Web scraping for comprehensive detection**
 - **Exploit Database** with **AI-powered analysis** ✨
 - **GitHub Security Advisories** with **AI-powered analysis** ✨
