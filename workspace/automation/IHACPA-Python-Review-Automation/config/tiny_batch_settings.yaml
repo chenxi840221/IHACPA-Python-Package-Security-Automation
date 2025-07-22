@@ -1,0 +1,44 @@
+# Tiny batch configuration for testing
+# Processes only 1 package at a time with maximum safety
+
+app:
+  name: "IHACPA Python Package Review Automation"
+  version: "1.5.0"
+  log_level: "DEBUG"
+  debug_mode: true
+
+processing:
+  concurrent_requests: 1        # Only 1 request at a time
+  request_timeout: 60           # Long timeout for debugging
+  retry_attempts: 1             # Minimal retries
+  retry_delay: 5                # Long delay between retries
+  batch_size: 1                 # TINY BATCH: Only 1 package per batch
+  total_packages: 486
+  rate_limit_delay: 3.0         # 3 second delay between requests
+
+excel:
+  backup_original: true
+  preserve_formatting: true
+  header_row: 3
+  total_columns: 23
+  data_start_row: 4
+  timestamp_backups: true
+  sheet_name: "Sheet1"
+
+output:
+  generate_summary: true
+  create_reports: true
+  timestamp_files: true
+  export_formats: ["xlsx"]
+  backup_directory: "data/backups"
+  output_directory: "data/output"
+  report_directory: "data/reports"
+
+logging:
+  level: "DEBUG"
+  file_rotation: true
+  max_file_size: "10MB"
+  backup_count: 5
+  log_directory: "logs"
+  log_format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  console_output: true

@@ -1,0 +1,231 @@
+McFarlane, Doug James
+0 minutes 6 seconds0:06
+McFarlane, Doug James 0 minutes 6 seconds
+Pypypi.org and pull up the information about that particular package. So what we're doing, So what I'm doing as far as so working from left to right, we open that one up. We can see. Yes, that's correct.
+McFarlane, Doug James 0 minutes 22 seconds
+We're may. I'm making a note of the date when the package was released because because what we're actually finding some of these packages are actually rather old. And as you can sort of see this one was released in 2022. Now that doesn't mean to say that that's so there's packages here like for example.
+McFarlane, Doug James 0 minutes 41 seconds
+One here was released in 2018. That's not the end of the world, but that was the last release of it. So what we're looking for is cut the current date of the current install and then when we go to the, you'll see here in this red box.
+McFarlane, Doug James 0 minutes 56 seconds
+Here there's a newer version available and what I'm doing here is noting the the newer version and putting it in the latest version and then that link here gets updated and this is a sanity check to make sure we get the right link and it comes up saying latest version.
+McFarlane, Doug James 1 minute 16 seconds
+Which is good, and I'll note the date down.
+McFarlane, Doug James 1 minute 20 seconds
+The 3rd of June 25, I'll grab some additional detail about the package. So for example, under requires, you'll see Python 9, but rather than copy paste it, I've already got. Just grab them from the spreadsheet because that's nicely formatted and the other thing we look here.
+McFarlane, Doug James 1 minute 39 seconds
+Used for the development status, which so again I've tried to make sure all of this is self-explanatory so so then we can go for obviously a lot of them are usually production stable, but in this particular case we're looking for 4 beta.
+McFarlane, Doug James 1 minute 59 seconds
+Which we have one here and copy and paste that in there. Then what we do then what it would do is we look for the GitHub link.
+McFarlane, Doug James 2 minutes 9 seconds
+More often than not, as under the homepage link on here.
+McFarlane, Doug James 2 minutes 15 seconds
+And Bingo, you'll see that was GitHub. Copy the URL in this. The next row just simply appends security to the end of it, and so I just click on that link that might. That way we test the link, we're happy.
+McFarlane, Doug James 2 minutes 32 seconds
+That has actually gone to the right place, and in this particular case, if there's no published security advisories, I'll copy that across. However, in a case like this one.
+
+McFarlane, Doug James
+33 minutes 26 seconds33:26
+McFarlane, Doug James 33 minutes 26 seconds
+There.
+McFarlane, Doug James 33 minutes 29 seconds
+OK.
+AL
+Aney, Linda
+33 minutes 32 seconds33:32
+Aney, Linda 33 minutes 32 seconds
+Has moments of needing to do work, but unless something goes wrong, you know he's probably got six hours a day that he doesn't have to work and and it's hard to predict when things are going to go wrong so.
+
+McFarlane, Doug James
+33 minutes 45 seconds33:45
+McFarlane, Doug James 33 minutes 45 seconds
+Oh oh.
+McFarlane, Doug James 33 minutes 48 seconds
+Yep. Yep. So. So he's sitting on the bench, so he he, he he he's sitting in the fire station ready to go.
+AL
+Aney, Linda
+33 minutes 49 seconds33:49
+Aney, Linda 33 minutes 49 seconds
+None.
+Aney, Linda 33 minutes 52 seconds
+He's not really.
+Aney, Linda 33 minutes 55 seconds
+Yeah, yeah, yeah. And 'cause, I am now looking after a triple CI can juggle if I need to, and if he gets pulled into a problem, then I'll let you know and we'll have to go back to the manual process.
+
+McFarlane, Doug James
+33 minutes 57 seconds33:57
+McFarlane, Doug James 33 minutes 57 seconds
+Alex.
+McFarlane, Doug James 34 minutes 2 seconds
+Yeah.
+McFarlane, Doug James 34 minutes 6 seconds
+Yeah. No, that's fine. Yeah. Yeah, yeah. Yeah, yeah, yeah. So look, we might have to just do a little bit, just help push it along a bit. But as I said, I was sort of just getting up to item 284. So it only says so at least when we sort of say something is, well, it's only.
+AL
+Aney, Linda
+34 minutes 16 seconds34:16
+Aney, Linda 34 minutes 16 seconds
+Hmm.
+
+McFarlane, Doug James
+34 minutes 26 seconds34:26
+McFarlane, Doug James 34 minutes 26 seconds
+200 items to go and what I'm what? And I've been doing it, but all the meetings would be sitting in. I've been doing those even on other client meetings just to keep it just just to keep it moving.
+AL
+Aney, Linda
+34 minutes 28 seconds34:28
+Aney, Linda 34 minutes 28 seconds
+None.
+Aney, Linda 34 minutes 35 seconds
+Yeah.
+Aney, Linda 34 minutes 41 seconds
+Yeah, some of it. I have the ones and do other stuff and others, we need you. It's sometimes it's just for information. So you know what the Hell's?
+
+McFarlane, Doug James
+34 minutes 48 seconds34:48
+McFarlane, Doug James 34 minutes 48 seconds
+Yeah. Yeah, yeah, yeah. So it's more for, yeah, more just pure intelligence as to what's happening in the background. Yeah. Yeah, no, totally get it. Totally get it. Like. And hopefully when I interjected in that Citrix 1.
+AL
+Aney, Linda
+34 minutes 54 seconds34:54
+Aney, Linda 34 minutes 54 seconds
+MMM.
+Aney, Linda 34 minutes 58 seconds
+Hmm.
+Aney, Linda 35 minutes
+Yeah.
+Aney, Linda 35 minutes 1 second
+Hmm.
+
+McFarlane, Doug James
+35 minutes 6 seconds35:06
+McFarlane, Doug James 35 minutes 6 seconds
+Yes, like I'm not sure if Elvis necessarily appreciate, appreciate appreciates it, but at least I can bring some of my own, my own Citrix experience to the table at least be a senator, at least be a sanity check. And I'm just saying, yeah, look, as long as it's.
+AL
+Aney, Linda
+35 minutes 16 seconds35:16
+Aney, Linda 35 minutes 16 seconds
+Yeah.
+
+McFarlane, Doug James
+35 minutes 22 seconds35:22
+McFarlane, Doug James 35 minutes 22 seconds
+You know 95%, right? Unless it's something that's really got us grab us as strangle us. I can. I'll just leave it alone.
+AL
+Aney, Linda
+35 minutes 29 seconds35:29
+Aney, Linda 35 minutes 29 seconds
+Hmm.
+Aney, Linda 35 minutes 31 seconds
+Oh yeah, yeah. And you know, Angela likes hearing that you're OK with whatever we're proposing.
+
+McFarlane, Doug James
+35 minutes 33 seconds35:33
+McFarlane, Doug James 35 minutes 33 seconds
+Method.
+McFarlane, Doug James 35 minutes 39 seconds
+Yeah, yeah. I don't know what what it is in that. It's a bit disconcerting.
+AL
+Aney, Linda
+35 minutes 49 seconds35:49
+Aney, Linda 35 minutes 49 seconds
+Yeah, I I find it a bit amusing because as if we would propose something that you went no way.
+
+McFarlane, Doug James
+35 minutes 49 seconds35:49
+McFarlane, Doug James 35 minutes 49 seconds
+You want.
+McFarlane, Doug James 35 minutes 56 seconds
+Yeah, yeah, no. When it was, who was it in the past when we were? Who is it the Citrix?
+AL
+Aney, Linda
+36 minutes 5 seconds36:05
+Aney, Linda 36 minutes 5 seconds
+Oh yeah, Amit.
+
+McFarlane, Doug James
+36 minutes 6 seconds36:06
+McFarlane, Doug James 36 minutes 6 seconds
+Yeah. It's just like, oh, God. Oh, we bought the arpit with all the problems with profiles and everything like that. I think they appreciated someone else's. Been there and done that, or at least go someone to call ******** anyway.
+AL
+Aney, Linda
+36 minutes 9 seconds36:09
+Aney, Linda 36 minutes 9 seconds
+No, I'll Pete, I'll Pete.
+Aney, Linda 36 minutes 18 seconds
+Yeah.
+Aney, Linda 36 minutes 22 seconds
+Yeah, you know, they wanted him put him back on the account and we and Robert and I said no.
+
+McFarlane, Doug James
+36 minutes 25 seconds36:25
+McFarlane, Doug James 36 minutes 25 seconds
+But.
+McFarlane, Doug James 36 minutes 29 seconds
+Good move. Good move. No much better.
+AL
+Aney, Linda
+36 minutes 30 seconds36:30
+Aney, Linda 36 minutes 30 seconds
+Which is why we got Elvis. As we said, they wouldn't accept him.
+
+McFarlane, Doug James
+36 minutes 35 seconds36:35
+McFarlane, Doug James 36 minutes 35 seconds
+Much, much better choice. Much better choice. Elvis can be a little bit intense, but I can I'd rather intense rather than over incompetent.
+AL
+Aney, Linda
+36 minutes 38 seconds36:38
+Aney, Linda 36 minutes 38 seconds
+Yeah, yeah.
+Aney, Linda 36 minutes 46 seconds
+Hmm. Yeah, that's right.
+Aney, Linda 36 minutes 48 seconds
+Mm-hmm.
+
+McFarlane, Doug James
+36 minutes 48 seconds36:48
+McFarlane, Doug James 36 minutes 48 seconds
+And if there's anything I wouldn't go and hang, I wouldn't hang him out to dry in a meeting anyway. I'll just go look. Linda. Hey, I've seen this. Blah, blah, blah. And we just do it offline and go. Oh, yeah, but.
+AL
+Aney, Linda
+36 minutes 57 seconds36:57
+Aney, Linda 36 minutes 57 seconds
+Hmm.
+Aney, Linda 36 minutes 59 seconds
+Yeah, yeah.
+
+McFarlane, Doug James
+37 minutes 3 seconds37:03
+McFarlane, Doug James 37 minutes 3 seconds
+No, all good. All right, let's see what Sean comes up with. And I'm just gonna go and have some lunch and come back from lunch and get into. Yeah. And just get this.
+AL
+Aney, Linda
+37 minutes 5 seconds37:05
+Aney, Linda 37 minutes 5 seconds
+All right.
+Aney, Linda 37 minutes 9 seconds
+Hmm.
+Aney, Linda 37 minutes 15 seconds
+Do the monthly report.
+Aney, Linda 37 minutes 18 seconds
+Oh, that's what I've got to do is ask for that login report. It's a bit useless, but I have to want it so I'll get it from him. That's OK. Don't worry about it. I know what you just reminded me.
+
+McFarlane, Doug James
+37 minutes 18 seconds37:18
+McFarlane, Doug James 37 minutes 18 seconds
+OK.
+McFarlane, Doug James 37 minutes 25 seconds
+OK.
+McFarlane, Doug James 37 minutes 31 seconds
+Yeah. Oh, OK. No, that's all right. I don't know if that's a good thing or a bad thing, but I'll go. I'll say it's a good thing.
+AL
+Aney, Linda
+37 minutes 33 seconds37:33
+Aney, Linda 37 minutes 33 seconds
+Yeah.
+Aney, Linda 37 minutes 39 seconds
+Yes, alright. Thanks. Enjoy your lunch. I'll go and do something similar.
+
+McFarlane, Doug James
+37 minutes 43 seconds37:43
+McFarlane, Doug James 37 minutes 43 seconds
+Yeah.

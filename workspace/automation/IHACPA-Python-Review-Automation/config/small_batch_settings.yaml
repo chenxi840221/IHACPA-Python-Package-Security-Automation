@@ -1,0 +1,44 @@
+# Small batch configuration for IHACPA automation
+# Use this for testing or slow network environments
+
+app:
+  name: "IHACPA Python Package Review Automation"
+  version: "1.5.0"
+  log_level: "INFO"
+  debug_mode: false
+
+processing:
+  concurrent_requests: 2        # Reduced from 5 to 2
+  request_timeout: 45           # Increased timeout for slow connections
+  retry_attempts: 2             # Reduced retries
+  retry_delay: 3                # Longer delay between retries
+  batch_size: 5                 # SMALL BATCH: Only 5 packages per batch (default 50)
+  total_packages: 486
+  rate_limit_delay: 2.0         # Longer delay between requests
+
+excel:
+  backup_original: true
+  preserve_formatting: true
+  header_row: 3
+  total_columns: 23
+  data_start_row: 4
+  timestamp_backups: true
+  sheet_name: "Sheet1"
+
+output:
+  generate_summary: true
+  create_reports: true
+  timestamp_files: true
+  export_formats: ["xlsx"]
+  backup_directory: "data/backups"
+  output_directory: "data/output"
+  report_directory: "data/reports"
+
+logging:
+  level: "INFO"
+  file_rotation: true
+  max_file_size: "10MB"
+  backup_count: 5
+  log_directory: "logs"
+  log_format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  console_output: true

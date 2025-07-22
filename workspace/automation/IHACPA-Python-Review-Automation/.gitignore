@@ -1,0 +1,180 @@
+# IHACPA Python Package Review Automation - .gitignore
+# Version 2.0.0 - Baseline Version
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.staging
+
+# Logs
+logs/
+*.log
+
+# Database
+*.db
+*.sqlite3
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project specific
+# -----------------
+
+# Input/Output Excel files (contain sensitive package data)
+*.xlsx
+*.xls
+*.xlsm
+
+# API Keys and sensitive configuration
+config.json
+config.yaml
+settings.yaml
+*.key
+*.pem
+*.crt
+
+# Generated reports
+data/output/*.txt
+data/output/*.json
+data/output/*.csv
+
+# Backup files
+data/backups/
+*.backup
+*.bak
+
+# Test outputs
+test_*.xlsx
+*_test.xlsx
+*_output.xlsx
+
+# AI Analysis cache (may contain sensitive vulnerability data)
+ai_cache/
+*.cache
+
+# OpenAI API logs
+openai_*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Local configuration overrides
+local_config.yaml
+local_settings.yaml
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Testing artifacts
+test-results/
+.tox/
+
+# Documentation builds
+docs/_build/
+docs/site/
+
+# Package distribution
+*.tar.gz
+*.zip
+
+# Security scans
+security_scan_*
+vulnerability_report_*
+
+# EXCEPTIONS - Files that should be included
+# ------------------------------------------
+
+# Keep example configuration templates
+!05-Configuration-Templates/
+!05-Configuration-Templates/*.yaml
+!05-Configuration-Templates/*.json
+
+# Keep documentation
+!*.md
+!docs/
+!docs/**/*.md
+
+# Keep requirements
+!requirements.txt
+!requirements-dev.txt
+
+# Keep source code
+!src/
+!src/**/*.py
+
+# Keep tests
+!tests/
+!tests/**/*.py
+
+# Keep project structure
+!01-Requirements-and-Planning/
+!02-Source-Data/.gitkeep
+!03-Prototype-Code/
+!04-Technical-Specifications/
+!06-Documentation/
+!07-Project-Management/
+
+# Keep essential project files
+!README.md
+!CHANGELOG.md
+!LICENSE
+!setup.py
+!pyproject.toml

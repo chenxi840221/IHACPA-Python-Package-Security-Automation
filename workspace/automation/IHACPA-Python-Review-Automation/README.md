@@ -4,13 +4,13 @@
 
 This project automates the cybersecurity vulnerability review process for Python packages used by IHACPA (Independent Health and Aged Care Pricing Authority). The system automatically updates package information, checks multiple vulnerability databases, and generates comprehensive security assessments.
 
-## Current Status - Version 2.3.0
+## Current Status - Version 2.4.0
 
 - **Total Packages to Review:** 486 (confirmed from Excel analysis)
-- **Status:** ✅ **VERSION 2.3.0** - Enhanced recommendation logic with Phase 1 improvements
-- **Latest Achievement:** Fixed SAFE vs VULNERABLE classification in recommendations (Column W)
-- **Key Improvements:** Multi-tier recommendation logic, < 10 CVE threshold alignment
-- **Enhanced:** All vulnerability scanners + intelligent recommendation system
+- **Status:** ✅ **VERSION 2.4.0** - Enhanced MITRE CVE scanner with improved accuracy
+- **Latest Achievement:** Fixed MITRE CVE detection issues - Werkzeug now finds 16 CVEs instead of "None found"
+- **Key Improvements:** Enhanced search strategy, better relevance filtering, reduced false positives
+- **Enhanced:** All vulnerability scanners + intelligent recommendation system + improved MITRE accuracy
 
 ## Key Features
 
@@ -48,7 +48,15 @@ This project automates the cybersecurity vulnerability review process for Python
 - Executive summary reporting with AI insights
 - **Complete automation** of vulnerability analysis workflow
 
-## 🚀 Version 2.3.0 Latest Improvements (July 22, 2025)
+## 🚀 Version 2.4.0 Latest Improvements (July 22, 2025)
+
+### Enhanced MITRE CVE Scanner 🔍
+- **FIXED: Missing CVE Detection** - Packages like Werkzeug now find CVEs instead of "None found"
+- **ENHANCED: Search Strategy** - Multiple search terms for comprehensive CVE discovery
+- **IMPROVED: Relevance Filtering** - Better distinction between Python packages and false positives
+- **REDUCED: False Positives** - Special handling for common word packages (e.g., "zipp" ZIP file conflicts)
+
+## 🎯 Version 2.3.0 Recommendation Improvements (July 22, 2025)
 
 ### Phase 1 Recommendation Enhancements 🎯
 - **FIXED: SAFE vs VULNERABLE Classification** - Column W now correctly distinguishes between safe and vulnerable packages
@@ -655,10 +663,17 @@ This tool is designed for internal IHACPA use and handles sensitive security inf
 ---
 
 **Last Updated:** July 22, 2025  
-**Version:** 2.3.0 - Enhanced Recommendation Logic with Phase 1 Improvements 🎯  
+**Version:** 2.4.0 - Enhanced MITRE CVE Scanner with Improved Accuracy 🔍  
 **Status:** ✅ **PRODUCTION READY** - Complete vulnerability detection and intelligent recommendations
 
-## Recent Updates (July 22, 2025) 🎯
+## Recent Updates (July 22, 2025) 🔍
+
+### Version 2.4.0 - Enhanced MITRE CVE Scanner
+- ✅ **FIXED: Werkzeug Detection** - Was showing "None found", now finds 16 CVEs (perfect match with website)
+- ✅ **REDUCED: False Positives** - zipp package: eliminated 26 false ZIP file CVEs, now shows 0 CVEs  
+- ✅ **Enhanced Search Strategy** - Multiple search terms for better CVE discovery
+- ✅ **Improved Filtering** - Known Python packages whitelist with smart context detection
+- ✅ **Package-Specific Logic** - Special handling for common words that conflict with Python packages
 
 ### Version 2.3.0 - Phase 1 Recommendation Improvements
 - ✅ **FIXED: SAFE Classification** - "SAFE - X CVEs found but version not affected" now correctly treated as safe

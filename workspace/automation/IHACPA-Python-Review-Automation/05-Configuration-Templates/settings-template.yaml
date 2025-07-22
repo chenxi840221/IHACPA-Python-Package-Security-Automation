@@ -1,0 +1,55 @@
+# IHACPA Python Package Review Automation Settings
+# Updated with tested configuration - 2025-07-09
+
+app:
+  name: "IHACPA Python Package Review Automation"
+  version: "1.0.0"
+  log_level: "INFO"
+  debug_mode: false
+
+# Processing settings (based on 486 packages analysis)
+processing:
+  concurrent_requests: 5
+  request_timeout: 30
+  retry_attempts: 3
+  retry_delay: 2
+  batch_size: 50
+  total_packages: 486  # Confirmed from Excel analysis
+
+# Excel settings (verified structure)
+excel:
+  backup_original: true
+  preserve_formatting: true
+  header_row: 3          # Confirmed: Row 3 contains headers
+  total_columns: 23      # Confirmed: 23 columns in Excel file
+  data_start_row: 4      # Confirmed: Data starts at row 4
+  timestamp_backups: true
+  sheet_name: "Sheet1"   # Primary sheet name
+
+# Output settings
+output:
+  generate_summary: true
+  create_reports: true
+  timestamp_files: true
+  export_formats: ["xlsx", "csv", "json"]
+
+# Logging settings
+logging:
+  level: "INFO"
+  file_rotation: true
+  max_file_size: "10MB"
+  backup_count: 5
+
+# Package analysis settings (based on Excel column structure)
+columns:
+  package_name: 2        # Column B
+  version: 3             # Column C
+  pypi_link_current: 4   # Column D
+  date_published: 5      # Column E
+  latest_version: 6      # Column F
+  pypi_link_latest: 7    # Column G
+  latest_release_date: 8 # Column H
+  requires: 9            # Column I
+  development_status: 10 # Column J
+  github_url: 11         # Column K
+  recommendation: 23     # Column W

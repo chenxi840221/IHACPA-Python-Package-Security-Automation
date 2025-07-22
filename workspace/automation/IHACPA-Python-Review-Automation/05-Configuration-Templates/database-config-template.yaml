@@ -1,0 +1,61 @@
+# Vulnerability Database Configuration
+# Updated with tested settings - 2025-07-09
+
+databases:
+  pypi:
+    base_url: "https://pypi.org/pypi"
+    api_format: "{base_url}/{package}/json"
+    rate_limit: 10  # requests per second
+    timeout: 30
+    status: "tested"  # Confirmed working 2025-07-09
+    
+  nist_nvd:
+    base_url: "https://services.nvd.nist.gov/rest/json/cves/2.0"
+    rate_limit: 5  # requests per 30 seconds
+    requires_auth: false
+    timeout: 45
+    status: "configured"
+    
+  mitre_cve:
+    base_url: "https://cve.mitre.org/cgi-bin/cvekey.cgi"
+    rate_limit: 3  # requests per second
+    requires_auth: false
+    timeout: 30
+    status: "configured"
+    
+  snyk:
+    base_url: "https://security.snyk.io/package/pip"
+    web_url: "https://snyk.io/api/v1/vuln/pip"
+    rate_limit: 10
+    requires_auth: false
+    timeout: 30
+    status: "configured"
+    
+  exploit_db:
+    base_url: "https://www.exploit-db.com/search"
+    rate_limit: 5
+    requires_auth: false
+    timeout: 30
+    status: "configured"
+    
+  github:
+    base_url: "https://api.github.com"
+    rate_limit: 60  # per hour for unauthenticated
+    rate_limit_authenticated: 5000  # per hour with token
+    requires_auth: true  # recommended for higher limits
+    timeout: 30
+    status: "configured"
+    # token: "your_github_token_here"  # Add your token in .env file
+
+# Excel column mappings for vulnerability results
+vulnerability_columns:
+  nist_nvd_url: 15      # Column O
+  nist_nvd_result: 16   # Column P
+  mitre_cve_url: 17     # Column Q
+  mitre_cve_result: 18  # Column R
+  snyk_url: 19          # Column S
+  snyk_result: 20       # Column T
+  exploit_db_url: 21    # Column U
+  exploit_db_result: 22 # Column V
+  github_security_url: 12    # Column L
+  github_security_result: 13 # Column M

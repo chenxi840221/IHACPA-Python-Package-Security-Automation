@@ -1,0 +1,50 @@
+# IHACPA Settings optimized for Azure OpenAI
+app:
+  name: "IHACPA Python Package Review Automation"
+  version: "1.0.0"
+  log_level: "INFO"
+  debug_mode: false
+
+# Processing settings optimized for Azure OpenAI rate limits
+processing:
+  concurrent_requests: 2  # Reduced from 5 to avoid overwhelming Azure API
+  request_timeout: 45     # Increased timeout for Azure API
+  retry_attempts: 3
+  retry_delay: 3          # Increased delay between retries
+  batch_size: 20          # Smaller batches for Azure processing
+  rate_limit_delay: 2.0   # Increased rate limiting
+  total_packages: 486
+
+# Excel settings (verified structure)
+excel:
+  backup_original: true
+  preserve_formatting: true
+  header_row: 3
+  total_columns: 23
+  data_start_row: 4
+  timestamp_backups: true
+  sheet_name: "Sheet1"
+
+# Output settings
+output:
+  generate_summary: true
+  create_reports: true
+  timestamp_files: true
+  export_formats: ["xlsx", "csv", "json"]
+
+# Logging settings
+logging:
+  level: "INFO"
+  file_rotation: true
+  log_directory: "logs"
+  max_file_size: "10MB"
+  backup_count: 5
+
+# Azure OpenAI specific settings
+azure_openai:
+  enabled: true
+  deployment_name: "gpt-4.1"
+  api_version: "2025-01-01-preview"
+  endpoint: "https://automation-seanchen.openai.azure.com/"
+  max_retries: 2
+  retry_delay: 5.0
