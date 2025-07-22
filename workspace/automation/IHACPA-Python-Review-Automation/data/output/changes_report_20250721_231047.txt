@@ -1,0 +1,92 @@
+IHACPA AUTOMATION CHANGES REPORT
+============================================================
+Generated: 2025-07-21 23:10:47
+Original file: 2025-07-09 IHACPA Review of ALL existing PYTHON Packages - org.xlsx
+Output file: fonttools.xlsx
+Dry run mode: False
+
+EXCEL FILE CHANGES REPORT
+==================================================
+
+Total packages modified: 1
+Total field changes: 17
+Most changed columns: E (1), F (1), G (1), H (1), I (1)
+
+DETAILED CHANGES BY PACKAGE:
+------------------------------
+
+📦 fonttools (Row 128):
+  🔄 Date Published (Col E): '2021-07-06 00:00:00' → '2021-07-05 17:11:48.185351'
+  🔄 Latest Version (Col F): '4.58.5' → '4.59.0'
+  🔄 Pypi Latest Link (Col G): '=HYPERLINK(_xlfn.CONCAT("https://pypi.org/project/",$B128,"/",$F128))' → 'https://pypi.org/project/fonttools/4.59.0/'
+  🔄 Latest Release Date (Col H): '2025-07-04 00:00:00' → '2025-07-16 12:03:33.267660'
+  🔄 Requires (Col I): 'Python >=3.9' → 'lxml, brotli, brotlicffi, zopfli, unicodedata2'
+  🔄 Development Status (Col J): '5 - Production/ Stable' → '5 - Production/Stable'
+  🔄 Github Url (Col K): 'https://github.com/fonttools/fonttools' → 'http://github.com/fonttools/fonttools'
+  🔄 Github Advisory Url (Col L): '=HYPERLINK(_xlfn.CONCAT($K128,"/security"))' → 'https://github.com/fonttools/fonttools/security/advisories'
+  🔄 Github Advisory Result (Col M): 'Package version not listed' → 'GitHub Security Advisory Analysis: FOUND - Multiple advisories affect fonttools versions prior to 4.28.5, including vulnerabilities rated as HIGH severity (e.g., CVE-2022-4285, CVE-2022-4474). Severity: HIGH. Current version 4.25.0: AFFECTED. Recommendation: ACTION_NEEDED—update to at least 4.28.5 or later to mitigate known vulnerabilities.'
+  🔄 Nist Nvd Url (Col O): '=HYPERLINK(_xlfn.CONCAT("https://nvd.nist.gov/vuln/search/results?form_type=Basic&results_type=overview&query=",$B128,"&search_type=all&isCpeNameSearch=false"),CONCATENATE("NVD NIST ",$B128," link"))' → 'https://nvd.nist.gov/vuln/search/results?form_type=Advanced&results_type=overview&search_type=all&query=fonttools'
+  🔄 Nist Nvd Result (Col P): 'Package version not listed' → 'None found'
+  🔄 Mitre Cve Url (Col Q): '=HYPERLINK(CONCATENATE("https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=",$B128),CONCATENATE("CVE MITRE ",$B128," link"))' → 'https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=fonttools'
+  🔄 Mitre Cve Result (Col R): 'Package version not listed' → 'SAFE - 1 MITRE CVEs found but v4.25.0 not affected'
+  🔄 Snyk Url (Col S): '=HYPERLINK(CONCATENATE("https://security.snyk.io/vuln/pip?search=",$B128),CONCATENATE("Snyk ",$B128," link"))' → 'https://security.snyk.io/vuln/pip/fonttools'
+  🔄 Snyk Result (Col T): 'Package version not listed' → 'None found'
+  🔄 Exploit Db Url (Col U): '=HYPERLINK(CONCATENATE("https://www.exploit-db.com/search?q=",$B128,"&verified=true"),CONCATENATE("Exploit-DB ",$B128," link"))' → 'https://www.exploit-db.com/search?text=fonttools'
+  🔄 Recommendation (Col W): 'PROCEED' → 'Update from 4.25.0 to 4.59.0 | SECURITY RISK: 2 vulnerabilities found | HIGH PRIORITY: HIGH severity vulnerabilities detected | Sources: GitHub Advisory: 1 (HIGH), MITRE CVE: 1 (NONE) | Review security advisories before deployment'
+
+CHANGES BY COLUMN:
+--------------------
+Column E: 1 changes
+Column F: 1 changes
+Column G: 1 changes
+Column H: 1 changes
+Column I: 1 changes
+Column J: 1 changes
+Column K: 1 changes
+Column L: 1 changes
+Column M: 1 changes
+Column O: 1 changes
+Column P: 1 changes
+Column Q: 1 changes
+Column R: 1 changes
+Column S: 1 changes
+Column T: 1 changes
+Column U: 1 changes
+Column W: 1 changes
+
+COLOR-CODED CHANGES SUMMARY
+========================================
+Total changes: 17
+Affected rows: 1
+
+CHANGES BY COLOR TYPE:
+  VERSION_UPDATE: 3 changes - Version information updated (Light orange background, dark orange text)
+  NEW_DATA: 7 changes - New data added (Light green background, dark green text)
+  UPDATED: 2 changes - General updates (Light blue background, dark blue text)
+  GITHUB_ADDED: 2 changes - GitHub information added (Light purple background, dark purple text)
+  SECURITY_RISK: 3 changes - Security vulnerabilities found (Light red background, dark red text)
+
+CHANGES BY FIELD:
+  date_published: 1 changes
+  development_status: 1 changes
+  exploit_db_url: 1 changes
+  github_advisory_result: 1 changes
+  github_advisory_url: 1 changes
+  github_url: 1 changes
+  latest_release_date: 1 changes
+  latest_version: 1 changes
+  mitre_cve_result: 1 changes
+  mitre_cve_url: 1 changes
+  nist_nvd_result: 1 changes
+  nist_nvd_url: 1 changes
+  pypi_latest_link: 1 changes
+  recommendation: 1 changes
+  requires: 1 changes
+  snyk_result: 1 changes
+  snyk_url: 1 changes
+
+PROCESSING STATISTICS:
+------------------------------
+Packages processed: 1
+Packages failed: 0
+Success rate: 100.0%

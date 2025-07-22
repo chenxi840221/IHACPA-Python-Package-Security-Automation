@@ -1,0 +1,90 @@
+IHACPA AUTOMATION CHANGES REPORT
+============================================================
+Generated: 2025-07-10 09:10:04
+Original file: 02-Source-Data/2025-07-09 IHACPA Review of ALL existing PYTHON Packages.xlsx
+Output file: test_fixed_packages.xlsx
+Dry run mode: False
+
+EXCEL FILE CHANGES REPORT
+==================================================
+
+Total packages modified: 4
+Total field changes: 28
+Most changed columns: E (4), F (4), G (4), H (4), J (4)
+
+DETAILED CHANGES BY PACKAGE:
+------------------------------
+
+📦 PyQt5 (Row 323):
+  ✅ Date Published (Col E): Added '2022-06-18 19:44:22.309169'
+  ✅ Latest Version (Col F): Added '5.15.11'
+  🔄 Pypi Latest Link (Col G): '=HYPERLINK(_xlfn.CONCAT("https://pypi.org/project/",$B323,"/",$F323))' → 'https://pypi.org/project/PyQt5/5.15.11/'
+  ✅ Latest Release Date (Col H): Added '2024-07-19 08:39:19.775514'
+  ✅ Requires (Col I): Added 'PyQt5-sip, PyQt5-Qt5'
+  ✅ Development Status (Col J): Added 'Unknown'
+  🔄 Recommendation (Col W): 'Update from 5.15.7 to ' → 'Update from 5.15.7 to 5.15.11'
+
+📦 PyQtWebEngine (Row 325):
+  ✅ Date Published (Col E): Added '2021-03-10 15:00:25.628175'
+  ✅ Latest Version (Col F): Added '5.15.7'
+  🔄 Pypi Latest Link (Col G): '=HYPERLINK(_xlfn.CONCAT("https://pypi.org/project/",$B325,"/",$F325))' → 'https://pypi.org/project/PyQtWebEngine/5.15.7/'
+  ✅ Latest Release Date (Col H): Added '2024-07-19 08:44:31.266717'
+  ✅ Requires (Col I): Added 'PyQt5-sip, PyQtWebEngine-Qt5, PyQt5'
+  ✅ Development Status (Col J): Added 'Unknown'
+  🔄 Recommendation (Col W): 'Update from 5.15.4 to ' → 'Update from 5.15.4 to 5.15.7'
+
+📦 ruamel.yaml (Row 377):
+  ✅ Date Published (Col E): Added '2022-02-12 08:54:03.046398'
+  ✅ Latest Version (Col F): Added '0.18.14'
+  🔄 Pypi Latest Link (Col G): '=HYPERLINK(_xlfn.CONCAT("https://pypi.org/project/",$B377,"/",$F377))' → 'https://pypi.org/project/ruamel.yaml/0.18.14/'
+  ✅ Latest Release Date (Col H): Added '2025-06-09 08:51:06.348152'
+  ✅ Requires (Col I): Added 'ruamel.yaml.clib, ruamel.yaml.jinja2, ryd, mercurial'
+  ✅ Development Status (Col J): Added '4 - Beta'
+  🔄 Nist Nvd Result (Col P): 'No vulnerabilities found in NIST NVD' → 'Found 1 vulnerabilities in NIST NVD'
+  🔄 Recommendation (Col W): 'Update from 0.17.21 to ' → 'Update from 0.17.21 to 0.18.14 | SECURITY RISK: 1 vulnerabilities found | Review security advisories before deployment | HIGH PRIORITY: CRITICAL severity vulnerability found'
+
+📦 Unidecode (Row 454):
+  ✅ Date Published (Col E): Added '2021-02-05 11:51:38.944082'
+  ✅ Latest Version (Col F): Added '1.4.0'
+  🔄 Pypi Latest Link (Col G): '=HYPERLINK(_xlfn.CONCAT("https://pypi.org/project/",$B454,"/",$F454))' → 'https://pypi.org/project/Unidecode/1.4.0/'
+  ✅ Latest Release Date (Col H): Added '2025-04-24 08:45:01.609169'
+  ✅ Development Status (Col J): Added 'Unknown'
+  🔄 Recommendation (Col W): 'Update from 1.2.0 to ' → 'Update from 1.2.0 to 1.4.0'
+
+CHANGES BY COLUMN:
+--------------------
+Column E: 4 changes
+Column F: 4 changes
+Column G: 4 changes
+Column H: 4 changes
+Column I: 3 changes
+Column J: 4 changes
+Column P: 1 changes
+Column W: 4 changes
+
+COLOR-CODED CHANGES SUMMARY
+========================================
+Total changes: 29
+Affected rows: 4
+
+CHANGES BY COLOR TYPE:
+  VERSION_UPDATE: 12 changes - Version information updated (Orange)
+  NEW_DATA: 4 changes - New data added (Green)
+  UPDATED: 11 changes - General updates (Blue)
+  SECURITY_RISK: 2 changes - Security vulnerabilities found (Red)
+
+CHANGES BY FIELD:
+  date_published: 4 changes
+  development_status: 4 changes
+  latest_release_date: 4 changes
+  latest_version: 4 changes
+  nist_nvd_result: 1 changes
+  pypi_latest_link: 4 changes
+  recommendation: 4 changes
+  requires: 4 changes
+
+PROCESSING STATISTICS:
+------------------------------
+Packages processed: 4
+Packages failed: 0
+Success rate: 100.0%

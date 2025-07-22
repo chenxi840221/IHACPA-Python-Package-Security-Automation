@@ -1,0 +1,49 @@
+IHACPA AUTOMATION CHANGES REPORT
+============================================================
+Generated: 2025-07-09 19:22:05
+Original file: 02-Source-Data/2025-07-09 IHACPA Review of ALL existing PYTHON Packages.xlsx
+Output file: test_pytz_fix.xlsx
+Dry run mode: False
+
+EXCEL FILE CHANGES REPORT
+==================================================
+
+Total packages modified: 3
+Total field changes: 3
+Most changed columns: H (3)
+
+DETAILED CHANGES BY PACKAGE:
+------------------------------
+
+📦 pytz (Row 352):
+  🔄 Latest Release Date (Col H): '2025-03-25 02:24:58.468000' → '2025-03-25 02:24:58.468169'
+
+📦 recordlinkage (Row 366):
+  🔄 Latest Release Date (Col H): '2023-07-20 13:01:56.810000' → '2023-07-20 13:01:56.810487'
+
+📦 zope.event (Row 486):
+  🔄 Latest Release Date (Col H): '2025-06-26 07:14:21.779000' → '2025-06-26 07:14:21.779125'
+
+CHANGES BY COLUMN:
+--------------------
+Column H: 3 changes
+
+COLOR-CODED CHANGES SUMMARY
+========================================
+Total changes: 7
+Affected rows: 3
+
+CHANGES BY COLOR TYPE:
+  UPDATED: 4 changes - General updates (Blue)
+  VERSION_UPDATE: 3 changes - Version information updated (Orange)
+
+CHANGES BY FIELD:
+  date_published: 3 changes
+  latest_release_date: 3 changes
+  requires: 1 changes
+
+PROCESSING STATISTICS:
+------------------------------
+Packages processed: 3
+Packages failed: 0
+Success rate: 100.0%

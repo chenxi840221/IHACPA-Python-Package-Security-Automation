@@ -1,0 +1,10 @@
+IHACPA Python Package Review Automation Report
+============================================================
+Generated: 2025-07-21 21:58:00
+Excel file: pure-eval.xlsx
+Total packages: 486
+
+Processing Summary:
+------------------------------
+Processed: 1
+Failed: 0

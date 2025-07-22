@@ -1,0 +1,10 @@
+IHACPA Python Package Review Automation Report
+============================================================
+Generated: 2025-07-22 06:35:30
+Excel file: requests_no_cve_test.xlsx
+Total packages: 486
+
+Processing Summary:
+------------------------------
+Processed: 1
+Failed: 0

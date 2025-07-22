@@ -82,13 +82,14 @@ settings.yaml
 *.pem
 *.crt
 
-# Generated reports
-data/output/*.txt
-data/output/*.json
-data/output/*.csv
+# Generated reports and data folders
+data/
+data/output/
+data/backups/
+data/reports/
+data/input/
 
 # Backup files
-data/backups/
 *.backup
 *.bak
 
@@ -172,9 +173,9 @@ vulnerability_report_*
 !test_*.py
 !debug_*.py
 
-# Keep project structure
+# Keep project structure (excluding data and logs folders)
 !01-Requirements-and-Planning/
-!02-Source-Data/.gitkeep
+!02-Source-Data/
 !03-Prototype-Code/
 !04-Technical-Specifications/
 !06-Documentation/

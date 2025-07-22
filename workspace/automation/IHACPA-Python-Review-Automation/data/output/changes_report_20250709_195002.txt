@@ -1,0 +1,57 @@
+IHACPA AUTOMATION CHANGES REPORT
+============================================================
+Generated: 2025-07-09 19:50:03
+Original file: 02-Source-Data/2025-07-09 IHACPA Review of ALL existing PYTHON Packages.xlsx
+Output file: test_not_available.xlsx
+Dry run mode: False
+
+EXCEL FILE CHANGES REPORT
+==================================================
+
+Total packages modified: 2
+Total field changes: 6
+Most changed columns: E (2), H (2), P (1), W (1)
+
+DETAILED CHANGES BY PACKAGE:
+------------------------------
+
+📦 pytz (Row 352):
+  🔄 Date Published (Col E): '2025-03-25 02:24:58.468000' → 'Not Available'
+  🔄 Latest Release Date (Col H): '2025-03-25 02:24:58.468000' → '2025-03-25 02:24:58.468169'
+
+📦 PyYAML (Row 358):
+  🔄 Date Published (Col E): '2024-08-06 20:31:40.178000' → 'Not Available'
+  🔄 Latest Release Date (Col H): '2024-08-06 20:31:40.178000' → '2024-08-06 20:31:40.178426'
+  🔄 Nist Nvd Result (Col P): 'No vulnerabilities found in NIST NVD' → 'Found 4 vulnerabilities in NIST NVD'
+  🔄 Recommendation (Col W): 'Update from 6 to 6.0.2' → 'Update from 6 to 6.0.2 | SECURITY RISK: 4 vulnerabilities found | Review security advisories before deployment | HIGH PRIORITY: CRITICAL severity vulnerability found'
+
+CHANGES BY COLUMN:
+--------------------
+Column E: 2 changes
+Column H: 2 changes
+Column P: 1 changes
+Column W: 1 changes
+
+COLOR-CODED CHANGES SUMMARY
+========================================
+Total changes: 8
+Affected rows: 2
+
+CHANGES BY COLOR TYPE:
+  VERSION_UPDATE: 2 changes - Version information updated (Orange)
+  UPDATED: 2 changes - General updates (Blue)
+  NOT_AVAILABLE: 2 changes - not_available
+  SECURITY_RISK: 2 changes - Security vulnerabilities found (Red)
+
+CHANGES BY FIELD:
+  date_published: 2 changes
+  latest_release_date: 2 changes
+  nist_nvd_result: 1 changes
+  recommendation: 1 changes
+  requires: 2 changes
+
+PROCESSING STATISTICS:
+------------------------------
+Packages processed: 2
+Packages failed: 0
+Success rate: 100.0%
