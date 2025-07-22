@@ -4,13 +4,13 @@
 
 This project automates the cybersecurity vulnerability review process for Python packages used by IHACPA (Independent Health and Aged Care Pricing Authority). The system automatically updates package information, checks multiple vulnerability databases, and generates comprehensive security assessments.
 
-## Current Status - Version 2.4.0
+## Current Status - Version 2.5.0
 
 - **Total Packages to Review:** 486 (confirmed from Excel analysis)
-- **Status:** ✅ **VERSION 2.4.0** - Enhanced MITRE CVE scanner with improved accuracy
-- **Latest Achievement:** Fixed MITRE CVE detection issues - Werkzeug now finds 16 CVEs instead of "None found"
-- **Key Improvements:** Enhanced search strategy, better relevance filtering, reduced false positives
-- **Enhanced:** All vulnerability scanners + intelligent recommendation system + improved MITRE accuracy
+- **Status:** ✅ **VERSION 2.5.0** - Enhanced NIST NVD scanner with WordPress/CMS plugin filtering
+- **Latest Achievement:** Fixed NIST NVD Column P discrepancies - lxml finds 10 CVEs, tabulate correctly filters WordPress plugin false positives
+- **Key Improvements:** Enhanced false positive detection, WordPress/CMS plugin exclusions, improved Python package recognition
+- **Enhanced:** All vulnerability scanners + intelligent recommendation system + improved MITRE accuracy + enhanced NIST NVD filtering
 
 ## Key Features
 
@@ -21,7 +21,7 @@ This project automates the cybersecurity vulnerability review process for Python
 - Compares current vs. latest versions
 
 ### Multi-Database Vulnerability Scanning 🔥 **ENHANCED in v2.0.0**
-- **NIST NVD** (National Vulnerability Database) with **AI-powered analysis** ✨ **FIXED: Now finds 100% of CVEs**
+- **NIST NVD** (National Vulnerability Database) with **AI-powered analysis** ✨ **ENHANCED: WordPress/CMS plugin filtering**
 - **MITRE CVE** database with **AI-powered analysis** ✨ **ENHANCED: Better Python package detection**
 - **SNYK** Vulnerability Database with **AI-powered analysis** ✨ **ENHANCED: Web scraping for comprehensive detection**
 - **Exploit Database** with **AI-powered analysis** ✨

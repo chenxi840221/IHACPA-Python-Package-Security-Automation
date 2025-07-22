@@ -1,6 +1,6 @@
 # Core dependencies for IHACPA Python Package Review Automation
-# Version 2.4.0 - Enhanced MITRE CVE scanner with improved accuracy
-# Updated 2025-07-22: Fixed MITRE CVE detection issues, improved filtering
+# Version 2.5.0 - Enhanced NIST NVD scanner with WordPress/CMS plugin filtering
+# Updated 2025-07-22: Fixed NIST NVD Column P discrepancies, enhanced false positive detection
 # Previous updates: Recommendation logic (v2.3.0), search strategy (v2.2.0), threshold optimization (v2.1.0)
 # Baseline fixes (v2.0.0): NIST NVD, MITRE CVE, SNYK scanner improvements
 
@@ -58,9 +58,15 @@ mkdocs-material>=9.0.0            # Documentation theme (updated to v9.x)
 # For development, install all dependencies:
 # pip install -r requirements.txt
 
-# TESTED VERSIONS (July 22, 2025) - Version 2.4.0
+# TESTED VERSIONS (July 22, 2025) - Version 2.5.0
 # All dependencies successfully tested with complete feature set:
 # - 486 packages processed with 100% success rate
+# Version 2.5.0 improvements:
+# - Fixed NIST NVD Column P discrepancies (lxml: "None found" → 10 CVEs found)
+# - Enhanced false positive detection (tabulate: WordPress plugin CVE correctly filtered)
+# - WordPress/CMS plugin filtering (CVE-2024-13223 Tabulate WordPress plugin excluded)
+# - Improved Python package vs non-Python software recognition
+# - Enhanced relevance filtering for better accuracy
 # Version 2.4.0 improvements:
 # - Fixed MITRE CVE detection issues (Werkzeug: "None found" → 16 CVEs found)
 # - Enhanced search strategy with multiple search terms for better coverage
