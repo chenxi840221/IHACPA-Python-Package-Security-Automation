@@ -69,10 +69,10 @@ Thumbs.db
 # Project specific
 # -----------------
 
-# Input/Output Excel files (contain sensitive package data)
-*.xlsx
-*.xls
-*.xlsm
+# Input/Output Excel files - REMOVED: Now including Excel files in repository
+# *.xlsx
+# *.xls
+# *.xlsm
 
 # API Keys and sensitive configuration
 config.json
@@ -92,10 +92,10 @@ data/backups/
 *.backup
 *.bak
 
-# Test outputs
-test_*.xlsx
-*_test.xlsx
-*_output.xlsx
+# Test outputs - REMOVED: Now including test Excel files
+# test_*.xlsx
+# *_test.xlsx
+# *_output.xlsx
 
 # AI Analysis cache (may contain sensitive vulnerability data)
 ai_cache/
@@ -127,11 +127,11 @@ dmypy.json
 test-results/
 .tox/
 
-# Debug and development test files
-debug_*.py
-test_*_issues*.py
-test_method_calls.py
-test_exact_method.py
+# Debug and development test files - REMOVED: Now including test cases
+# debug_*.py
+# test_*_issues*.py
+# test_method_calls.py
+# test_exact_method.py
 
 # Documentation builds
 docs/_build/
@@ -166,9 +166,11 @@ vulnerability_report_*
 !src/
 !src/**/*.py
 
-# Keep tests
+# Keep tests and test files
 !tests/
 !tests/**/*.py
+!test_*.py
+!debug_*.py
 
 # Keep project structure
 !01-Requirements-and-Planning/
