@@ -124,15 +124,54 @@ class IHACPAAutomation:
         try:
             # Get packages to process - NEW LOGIC: Process ALL packages for complete output
             if package_names:
-                # If specific packages requested, find them but warn this is not recommended
+                # If specific packages requested, find them or create new ones
                 packages = []
                 for name in package_names:
                     pkg = self.excel_handler.find_package_by_name(name)
                     if pkg:
                         packages.append(pkg)
                     else:
-                        self.logger.warning(f"Package not found: {name}")
-                self.logger.warning("Processing specific packages only. For complete output, process all packages.")
+                        # Package not found - create new package entry
+                        self.logger.info(f"Package '{name}' not found in Excel file. Adding as new package.")
+                        
+                        # Get basic package info from PyPI first to determine if it exists
+                        pypi_info = self.pypi_client.get_package_info(name)
+                        if pypi_info:
+                            # Get date published for the current version
+                            current_version = pypi_info.get('version', 'Unknown')
+                            date_published = self.pypi_client.extract_version_date_from_package_info(pypi_info, current_version)
+                            
+                            # Create new package data structure with enhanced PyPI information
+                            new_package = {
+                                'package_name': name,
+                                'current_version': current_version,
+                                'pypi_current_link': pypi_info.get('pypi_url', f'https://pypi.org/project/{name}/'),  # Column D
+                                'date_published': self._format_date_for_excel(date_published),  # Column E - Fixed format
+                                'latest_version': pypi_info.get('latest_version', current_version),
+                                'pypi_latest_link': pypi_info.get('pypi_latest_url', f'https://pypi.org/project/{name}/{pypi_info.get("latest_version", current_version)}/'),
+                                'latest_release_date': self._format_date_for_excel(pypi_info.get('latest_release_date')),  # Column H - Fixed format
+                                'requires': ', '.join(pypi_info.get('dependencies', [])[:10]) if pypi_info.get('dependencies') else '',  # Limit to first 10 deps
+                                'development_status': self._extract_dev_status(pypi_info.get('classifiers', [])),
+                                'github_url': pypi_info.get('github_url', ''),
+                                'row_number': 0  # Will be set when added to Excel
+                            }
+                            
+                            # Add the new package to Excel file
+                            new_row = self.excel_handler.add_new_package(name, new_package)
+                            if new_row > 0:
+                                # Update the package data with the actual row number
+                                new_package['row_number'] = new_row
+                                packages.append(new_package)
+                                self.logger.info(f"Successfully added new package '{name}' at row {new_row}")
+                            else:
+                                self.logger.error(f"Failed to add new package '{name}' to Excel file")
+                        else:
+                            self.logger.warning(f"Package '{name}' not found on PyPI. Skipping.")
+                
+                if packages:
+                    self.logger.warning("Processing specific packages only. For complete output, process all packages.")
+                else:
+                    self.logger.warning("No valid packages found to process.")
             elif start_row and end_row:
                 # If row range specified, process that range but warn about incomplete output
                 packages = self.excel_handler.get_packages_by_range(start_row, end_row)
@@ -338,6 +377,40 @@ class IHACPAAutomation:
             if 'Development Status' in classifier:
                 return classifier.split('::')[-1].strip()
         return "Unknown"
+    
+    def _format_date_for_excel(self, date_obj):
+        """Format datetime object to a clean datetime object for Excel display (without microseconds)"""
+        if not date_obj:
+            return None
+        
+        try:
+            from datetime import datetime
+            
+            # Handle different datetime formats
+            if hasattr(date_obj, 'strftime'):
+                # Convert timezone-aware datetime to naive if needed
+                if hasattr(date_obj, 'tzinfo') and date_obj.tzinfo is not None:
+                    date_obj = date_obj.replace(tzinfo=None)
+                # Remove microseconds for cleaner display
+                clean_date = date_obj.replace(microsecond=0)
+                return clean_date
+            elif isinstance(date_obj, str):
+                # Try to parse string dates
+                try:
+                    parsed_date = datetime.fromisoformat(date_obj.replace('Z', '+00:00'))
+                    if hasattr(parsed_date, 'tzinfo') and parsed_date.tzinfo is not None:
+                        parsed_date = parsed_date.replace(tzinfo=None)
+                    # Remove microseconds for cleaner display
+                    clean_date = parsed_date.replace(microsecond=0)
+                    return clean_date
+                except ValueError:
+                    # If can't parse, try to return a string format
+                    return date_obj
+            else:
+                return date_obj
+        except Exception as e:
+            self.logger.warning(f"Error formatting date {date_obj}: {e}")
+            return date_obj if date_obj else None
     
     def _generate_hyperlink_formula(self, db_name: str, row_number: int, search_url: str) -> str:
         """Generate Excel hyperlink formula for vulnerability database URLs"""

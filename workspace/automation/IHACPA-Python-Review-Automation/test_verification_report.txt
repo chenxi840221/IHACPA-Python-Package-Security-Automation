@@ -1,0 +1,37 @@
+================================================================================
+IHACPA VULNERABILITY SCANNER VERIFICATION REPORT
+================================================================================
+Total Packages Tested: 2
+Test Date: 2025-07-22 21:54:15
+
+SUMMARY STATISTICS:
+NIST NVD Accuracy: 0/2 (0.0%)
+MITRE CVE Accuracy: 0/2 (0.0%)
+SNYK Accuracy: 0/2 (0.0%)
+
+DETAILED RESULTS:
+--------------------------------------------------------------------------------
+
+Package: requests v2.31.0
+NIST NVD: Our=2070 | Web=28 | Match=False
+MITRE CVE: Our=11 | Web=7344 | Match=False
+SNYK: Our=3 | Web=24 | Match=False
+Notes: NIST: Our 2070 vs Web 28; MITRE: Our 11 vs Web 7344; SNYK: Our 3 vs Web 24
+
+Package: flask v2.3.2
+NIST NVD: Our=145 | Web=29 | Match=False
+MITRE CVE: Our=7 | Web=159 | Match=False
+SNYK: Our=0 | Web=15 | Match=False
+Notes: NIST: Our 145 vs Web 29; MITRE: Our 7 vs Web 159; SNYK: Our 0 vs Web 15
+
+======================================== DISCREPANCIES ========================================
+
+requests v2.31.0:
+  NIST: Our 2070 != Web 28
+  MITRE: Our 11 != Web 7344
+  SNYK: Our 3 != Web 24
+
+flask v2.3.2:
+  NIST: Our 145 != Web 29
+  MITRE: Our 7 != Web 159
+  SNYK: Our 0 != Web 15

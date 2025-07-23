@@ -149,6 +149,10 @@ class ExcelHandler:
                         # Convert timezone-aware datetime to naive datetime
                         value = value.replace(tzinfo=None)
                     
+                    # Remove microseconds from datetime objects for cleaner display
+                    if hasattr(value, 'microsecond'):
+                        value = value.replace(microsecond=0)
+                    
                     # Only update if value has changed
                     if original_value != value:
                         cell.value = value
@@ -834,6 +838,121 @@ class ExcelHandler:
                 report.append(f"Column {col}: {count} changes")
         
         return "\n".join(report)
+    
+    def add_new_package(self, package_name: str, package_data: Dict[str, Any]) -> int:
+        """Add a new package row at the end of the Excel file
+        
+        Args:
+            package_name: Name of the package to add
+            package_data: Dictionary containing all package information
+            
+        Returns:
+            int: Row number of the newly created package
+        """
+        if not self.worksheet:
+            self.logger.error("Worksheet not loaded")
+            return 0
+        
+        try:
+            # Find the next available row (after last package)
+            new_row = self.worksheet.max_row + 1
+            
+            # Ensure we have at least the basic data structure
+            if new_row < self.DATA_START_ROW:
+                new_row = self.DATA_START_ROW
+            
+            self.logger.info(f"Adding new package '{package_name}' at row {new_row}")
+            
+            # Create complete package data with all required fields
+            complete_package_data = {
+                'index': new_row - self.DATA_START_ROW + 1,  # Sequential index
+                'package_name': package_name,
+                'current_version': package_data.get('current_version', ''),
+                'pypi_current_link': package_data.get('pypi_current_link', ''),
+                'date_published': package_data.get('date_published', ''),
+                'latest_version': package_data.get('latest_version', ''),
+                'pypi_latest_link': package_data.get('pypi_latest_link', ''),
+                'latest_release_date': package_data.get('latest_release_date', ''),
+                'requires': package_data.get('requires', ''),
+                'development_status': package_data.get('development_status', ''),
+                'github_url': package_data.get('github_url', ''),
+                'github_advisory_url': package_data.get('github_advisory_url', ''),
+                'github_advisory_result': package_data.get('github_advisory_result', ''),
+                'notes': package_data.get('notes', ''),
+                'nist_nvd_url': package_data.get('nist_nvd_url', ''),
+                'nist_nvd_result': package_data.get('nist_nvd_result', ''),
+                'mitre_cve_url': package_data.get('mitre_cve_url', ''),
+                'mitre_cve_result': package_data.get('mitre_cve_result', ''),
+                'snyk_url': package_data.get('snyk_url', ''),
+                'snyk_result': package_data.get('snyk_result', ''),
+                'exploit_db_url': package_data.get('exploit_db_url', ''),
+                'exploit_db_result': package_data.get('exploit_db_result', ''),
+                'recommendation': package_data.get('recommendation', '')
+            }
+            
+            # Fill all cells for the new package
+            for field, value in complete_package_data.items():
+                if field in self.COLUMN_MAPPING:
+                    column = self.COLUMN_MAPPING[field]
+                    cell = self.worksheet.cell(row=new_row, column=column)
+                    
+                    # Handle different value types
+                    if value is not None:
+                        # Fix datetime timezone issues for Excel
+                        if hasattr(value, 'tzinfo') and value.tzinfo is not None:
+                            # Convert timezone-aware datetime to naive datetime
+                            import pytz
+                            value = value.replace(tzinfo=None) if value.tzinfo == pytz.UTC else value.astimezone(pytz.UTC).replace(tzinfo=None)
+                        
+                        # Remove microseconds from datetime objects for cleaner display
+                        if hasattr(value, 'microsecond'):
+                            value = value.replace(microsecond=0)
+                        
+                        cell.value = value
+                    
+                    # Apply formatting for new data
+                    cell.fill = self.colors['new_data']
+                    cell.font = self.font_colors['new_data']
+                    cell.alignment = Alignment(horizontal='left', vertical='center', wrap_text=True)
+                    
+                    # Track the change
+                    self.changed_cells.append({
+                        'row': new_row,
+                        'column': column,
+                        'field': field,
+                        'original_value': '',  # New row, so no original value
+                        'new_value': str(value) if value is not None else '',
+                        'change_type': 'added',
+                        'color_type': 'new_data'
+                    })
+            
+            self.logger.info(f"Successfully added new package '{package_name}' at row {new_row}")
+            return new_row
+            
+        except Exception as e:
+            self.logger.error(f"Error adding new package '{package_name}': {e}")
+            return 0
+    
+    def package_exists(self, package_name: str) -> Tuple[bool, int]:
+        """Check if a package exists in the Excel file
+        
+        Args:
+            package_name: Name of the package to search for
+            
+        Returns:
+            Tuple[bool, int]: (exists, row_number) - row_number is 0 if not found
+        """
+        if not self.worksheet:
+            return False, 0
+        
+        package_name_lower = package_name.lower()
+        
+        for row in range(self.DATA_START_ROW, self.worksheet.max_row + 1):
+            existing_name = self.worksheet.cell(row=row, column=self.COLUMN_MAPPING['package_name']).value
+            if existing_name and existing_name.lower() == package_name_lower:
+                return True, row
+        
+        return False, 0
     
     def close(self):
         """Close the Excel workbook"""

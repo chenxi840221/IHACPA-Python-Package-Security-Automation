@@ -4,13 +4,13 @@
 
 This project automates the cybersecurity vulnerability review process for Python packages used by IHACPA (Independent Health and Aged Care Pricing Authority). The system automatically updates package information, checks multiple vulnerability databases, and generates comprehensive security assessments.
 
-## Current Status - Version 2.6.0
+## Current Status - Version 2.6.1
 
 - **Total Packages to Review:** 486 (confirmed from Excel analysis)
-- **Status:** ✅ **VERSION 2.6.0** - Additional MITRE CVE scanner fixes with hard exclusion improvements
-- **Latest Achievement:** Fixed additional MITRE CVE Column R discrepancies - PyJWT "ios" in "iss" false positive resolved, perfect accuracy achieved
-- **Key Improvements:** Hard exclusion pattern fixes, expanded known Python packages, JWT claim conflict resolution
-- **Enhanced:** All vulnerability scanners + intelligent recommendation system + near-perfect MITRE accuracy + enhanced NIST NVD filtering
+- **Status:** ✅ **VERSION 2.6.1** - NIST NVD scanner openpyxl detection issue fixed
+- **Latest Achievement:** Fixed NIST NVD Column P discrepancy - openpyxl CVE-2017-5992 now correctly detected, validated tabulate WordPress filtering
+- **Key Improvements:** Enhanced Excel library support, expanded known_python_packages with openpyxl/xlsxwriter/xlrd/xlwt
+- **Enhanced:** All vulnerability scanners + intelligent recommendation system + near-perfect accuracy + comprehensive package coverage
 
 ## Key Features
 

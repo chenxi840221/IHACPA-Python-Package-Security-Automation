@@ -3,7 +3,7 @@ IHACPA Python Package Review Automation
 Automates cybersecurity vulnerability review for Python packages
 """
 
-__version__ = "2.6.0"
+__version__ = "2.9.3"
 __author__ = "IHACPA Development Team"
 __email__ = "development@ihacpa.gov.au"
 __description__ = "Automated Python package vulnerability assessment tool"
